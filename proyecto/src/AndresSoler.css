@@ -1,0 +1,97 @@
+.tendencias {
+  padding: 40px 20px;
+  background-color: #000;
+  color: white;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tendencias h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contenedor-tendencias{
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* oculta las peliculas que sobran */
+}
+
+.fila-tendencias{
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.fila-tendencias::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  width: 200px; /* ancho fijo para que entren 5 */
+  height: 300px;
+  flex: 0 0 auto; /* evita que se encojan */
+  border-radius: 8px;
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card:hover {
+  transform: scale(1.08);
+}
+
+.numero {
+  position: absolute;
+  left: -20px;
+  bottom: -10px;
+  font-size: 7rem;
+  font-weight: 900;
+  color: black;
+  -webkit-text-stroke: 2px white;
+  z-index: 2;
+}
+
+/* flechas */
+
+.flecha{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 55px;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.contenedor-tendencias:hover .flecha{
+  opacity: 1;
+}
+
+.flecha:hover{
+  background: rgba(0,0,0,0.8);
+}
+
+.flecha.izquierda{
+  left: 0;
+}
+
+.flecha.derecha{
+  right: 0;
+}
