@@ -1,11 +1,23 @@
-import DavidMartinez from './DavidMartinez'
+import './App.css'
 import NavBar from './DavidSarmiento'
+import Principal from './Principal'
+import DavidMartinez from './DavidMartinez'
+import NetflixFooter from './FooterNetflix'
+import MatiasRamirez from './MatiasRamirez'
+import AndresSoler from './AndresSoler'
 
 function App() {
   return (
     <>
-      <NavBar/>
+      <header className="cabecera">
+        {/* Aquí va la navbar, con position:absolute para que no mueva la imagen */}
+        <NavBar />
+        <Principal />
+      </header>
       <DavidMartinez />
+      <MatiasRamirez />
+      <AndresSoler />
+      <NetflixFooter />
     </>
   )
 }
